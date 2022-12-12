@@ -1,0 +1,10 @@
+[
+    {
+        "version": "dev",
+        "url": "https://versioning.tools.docs.pyansys.com"
+    },
+    {
+        "version": "0.3 (stable)",
+        "url": "https://versioning.tools.docs.pyansys.com/release/0.3"
+    }
+]

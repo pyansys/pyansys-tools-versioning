@@ -1,0 +1,271 @@
+:py:mod:`ansys.tools.versioning.utils`
+======================================
+
+.. py:module:: ansys.tools.versioning.utils
+
+.. autoapi-nested-parse::
+
+   A module containing various utilities.
+
+   ..
+       !! processed by numpydoc !!
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   ansys.tools.versioning.utils.sanitize_version_string
+   ansys.tools.versioning.utils.sanitize_version_tuple
+   ansys.tools.versioning.utils.version_string_as_tuple
+   ansys.tools.versioning.utils.version_tuple_as_string
+   ansys.tools.versioning.utils.server_meets_version
+   ansys.tools.versioning.utils.requires_version
+
+
+
+.. py:function:: sanitize_version_string(version_string)
+
+   
+   Sanitize a version string number by adding additional zeros.
+
+
+   :Parameters:
+
+       **version_string** : :class:`python:str`
+           A string representing a semantic version.
+
+   :Returns:
+
+       :class:`python:str`
+           A string representing a semantic version.
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Examples
+
+   >>> sanitize_version_string("0")
+   '0.0.0'
+   >>> sanitize_version_string("1.2")
+   '1.2.0'
+   >>> sanitize_version_string("0.3.4")
+   '0.3.4'
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: sanitize_version_tuple(version_tuple)
+
+   
+   Sanitize a version number by adding additional zeros.
+
+
+   :Parameters:
+
+       **version_tuple** : :class:`python:tuple`
+           A tuple representing a semantic version.
+
+   :Returns:
+
+       :class:`python:tuple`
+           A tuple representing a semantic version.
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Examples
+
+   >>> sanitize_version_tuple((0,))
+   (0, 0, 0)
+   >>> sanitize_version_tuple((1, 2))
+   (1, 2, 0)
+   >>> sanitize_version_tuple((0, 3, 4))
+   (0, 3, 4)
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: version_string_as_tuple(version_string)
+
+   
+   Convert a semantic version string into a tuple.
+
+
+   :Parameters:
+
+       **version_string** : :class:`python:str`
+           A string representing a semantic version.
+
+   :Returns:
+
+       **version_tuple** : :class:`python:tuple`
+           A tuple representing a semantic version.
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Examples
+
+   >>> version_string_as_tuple("0.3.4")
+   (0, 3, 4)
+   >>> version_string_as_tuple("1.2")
+   (1, 2, 0)
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: version_tuple_as_string(version_tuple)
+
+   
+   Convert a semantic version tuple into a string.
+
+
+   :Parameters:
+
+       **version_tuple** : :class:`python:tuple`
+           A tuple representing a semantic version.
+
+   :Returns:
+
+       :class:`python:str`
+           A string representing a semantic version.
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Examples
+
+   >>> version_tuple_as_string((0, 3, 4))
+   '0.3.4'
+   >>> version_tuple_as_string((1, 2))
+   '1.2.0'
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: server_meets_version(server_version, required_version)
+
+   
+   Check if server meets the required version.
+
+
+   :Parameters:
+
+       **server_version** : :class:`python:str`, :class:`python:tuple`
+           A string or tuple representing the server version.
+
+       **required_version** : :class:`python:str`, :class:`python:tuple`
+           A string or tuple representing the version to be meet.
+
+   :Returns:
+
+       :ref:`bool <python:bltin-boolean-values>`
+           ``True`` if server version meets required version, ``False`` if not.
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Examples
+
+   >>> server_version, required_version = "1.2.0", "1.3.0"
+   >>> server_meets_version(server_version, required_version)
+   False
+   >>> server_version, required_version = (1, 2, 0), (1, 3, 0)
+   >>> server_meets_version(server_version, required_version)
+   False
+   >>> server_version, required_version = "2.3.0", "1.3.0"
+   >>> server_meets_version(server_version, required_version)
+   True
+   >>> server_version, required_version = (2, 3, 0), (1, 3, 0)
+   >>> server_meets_version(server_version, required_version)
+   True
+   >>> server_version, required_version = (0, 0, 0), (0, 0, 0)
+   >>> server_meets_version(server_version, required_version)
+   True
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+.. py:function:: requires_version(version, VERSION_MAP=None)
+
+   
+   Ensure the method called matches a certain version.
+
+
+   :Parameters:
+
+       **version** : :class:`python:str`, :class:`python:tuple`
+           A string or tuple representing the minimum required version.
+
+       **VERSION_MAP** : :class:`python:dict`, :obj:`optional`
+           A dictionary relating server version and ANSYS unified install version.
+
+
+
+
+
+   :Raises:
+
+       :obj:`AttributeError`
+           Decorated class method requires ``_server_version`` attribute.
+
+       :obj:`VersionError`
+           Decorated class method is not supported by server version.
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
