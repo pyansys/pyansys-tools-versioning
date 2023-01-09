@@ -342,6 +342,7 @@ and a <code class="docutils literal notranslate"><span class="pre">VERSION_MAP</
     <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span> <span class="s2">&quot;2022R1&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 
+
 <span class="k">class</span> <span class="nc">Server</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A basic class for modelling a server.&quot;&quot;&quot;</span>
 
@@ -368,7 +369,8 @@ while some others are not:</p>
 <p>Executing each one of the methods it is possible to see that both instances can
 execute the <code class="docutils literal notranslate"><span class="pre">old_method</span></code> function:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">server</span> <span class="ow">in</span> <span class="p">[</span><span class="n">old_server</span><span class="p">,</span> <span class="n">new_server</span><span class="p">]:</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="n">server</span><span class="o">.</span><span class="n">old_method</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="n">server</span><span class="o">.</span><span class="n">old_method</span><span class="p">()</span>
+<span class="gp">...</span>
 </pre></div>
 </div>
 <p>However, when trying to run <code class="docutils literal notranslate"><span class="pre">new_method</span></code>, the old server raises a
