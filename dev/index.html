@@ -370,11 +370,11 @@ function checkPageExistsAndRedirect(event) {
 <h3>For users<a class="headerlink" href="#for-users" title="Permalink to this heading">#</a></h3>
 <p>In order to install PyAnsys Tools Versioning, make sure you
 have the latest version of <a class="reference external" href="https://pypi.org/project/pip/">pip</a>. To do so, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install -U pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip
 </pre></div>
 </div>
 <p>Then, you can simply execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install pyansys-tools-versioning
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyansys-tools-versioning
 </pre></div>
 </div>
 </section>
@@ -387,7 +387,7 @@ need to follow these steps:</p>
 <ol class="arabic">
 <li><p>Start by cloning this repository:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/pyansys/pyansys-tools-versioning
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pyansys/pyansys-tools-versioning
 </pre></div>
 </div>
 </div></blockquote>
@@ -395,10 +395,10 @@ need to follow these steps:</p>
 <li><p>Create a fresh-clean Python environment and activate it:</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a virtual environment</span>
-python -m venv .venv
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 
 <span class="c1"># Activate it in a POSIX system</span>
-<span class="nb">source</span> .venv/bin/activate
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 
 <span class="c1"># Activate it in Windows CMD environment</span>
 .venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
@@ -411,17 +411,17 @@ python -m venv .venv
 </li>
 <li><p>Make sure you have the latest required build system and doc, testing, and CI tools:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install -U pip flit tox
-python -m pip install -r requirements/requirements_build.txt
-python -m pip install -r requirements/requirements_doc.txt
-python -m pip install -r requirements/requirements_tests.txt
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip<span class="w"> </span>flit<span class="w"> </span>tox
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/requirements_build.txt
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/requirements_doc.txt
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/requirements_tests.txt
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Install the project in editable mode:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install --editable pyansys-tools-versioning
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--editable<span class="w"> </span>pyansys-tools-versioning
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
@@ -463,7 +463,7 @@ environment, which is the reason why tools like <a class="reference external" hr
 <h3>A note on pre-commit<a class="headerlink" href="#a-note-on-pre-commit" title="Permalink to this heading">#</a></h3>
 <p>The style checks take advantage of <a class="reference external" href="https://pre-commit.com/">pre-commit</a>. Developers are not forced but
 encouraged to install this tool via:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install pre-commit <span class="o">&amp;&amp;</span> pre-commit install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pre-commit<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pre-commit<span class="w"> </span>install
 </pre></div>
 </div>
 </section>
@@ -472,11 +472,11 @@ encouraged to install this tool via:</p>
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a></h2>
 <p>For building documentation, you can either run the usual rules provided in the
 <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> Makefile, such us:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make -C doc/ html <span class="o">&amp;&amp;</span> your_browser_name doc/html/index.html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>-C<span class="w"> </span>doc/<span class="w"> </span>html<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>your_browser_name<span class="w"> </span>doc/html/index.html
 </pre></div>
 </div>
 <p>However, the recommended way of checking documentation integrity is using:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tox -e doc <span class="o">&amp;&amp;</span> your_browser_name .tox/doc_out/index.html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tox<span class="w"> </span>-e<span class="w"> </span>doc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>your_browser_name<span class="w"> </span>.tox/doc_out/index.html
 </pre></div>
 </div>
 </section>
@@ -484,9 +484,9 @@ encouraged to install this tool via:</p>
 <h2>Distributing<a class="headerlink" href="#distributing" title="Permalink to this heading">#</a></h2>
 <p>If you would like to create either source or wheel files, start by installing
 the building requirements and then executing the build module:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install -r requirements/requirements_build.txt
-python -m build
-python -m twine check dist/*
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/requirements_build.txt
+python<span class="w"> </span>-m<span class="w"> </span>build
+python<span class="w"> </span>-m<span class="w"> </span>twine<span class="w"> </span>check<span class="w"> </span>dist/*
 </pre></div>
 </div>
 <div class="toctree-wrapper compound">
@@ -513,13 +513,13 @@ python -m twine check dist/*
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+    &copy; Copyright (c) 2023 ANSYS, Inc. All rights reserved.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.0.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.1.2.<br>
 </p>
   </div>
   
